@@ -3,280 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raja Gautam - Data Entry & Web Scraping Specialist</title>
+    <title>Raja Gautam - Professional Portfolio</title>
     <style>
-        :root {
-            --primary-color: #2563eb; 
-            --dark-color: #1e293b;
-            --light-color: #f8fafc;
-            --accent-color: #22c55e;
-        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: var(--light-color);
-            color: var(--dark-color);
-            line-height: 1.6;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            padding: 30px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+        .main-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Unique, High-End Header Section */
         header {
-            background: var(--dark-color);
-            color: white;
-            padding: 2.5rem 0;
+            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e293b 100%);
+            border: 2px solid rgba(129, 140, 248, 0.4);
             text-align: center;
+            padding: 50px 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(49, 46, 129, 0.4);
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(56, 189, 248, 0.15);
+            border-radius: 50%;
+            filter: blur(40px);
         }
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #60a5fa, #c084fc, #f43f5e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 18px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-        header p {
-            font-size: 1.1rem;
-            color: #94a3b8;
-        }
-        .container {
+
+        /* Full-Width Smooth Marquee Ticker */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
             max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
+            margin: 0 auto;
+            background: rgba(15, 23, 42, 0.85);
+            padding: 12px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(192, 132, 252, 0.4);
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
         }
+        .marquee-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 22s linear infinite;
+            font-size: 1.1rem;
+            color: #38bdf8;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+
+        /* Sections */
         section {
-            background: white;
-            margin-bottom: 2rem;
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 35px;
         }
         h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
             font-size: 1.8rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
+            color: #f1f5f9;
+            margin-bottom: 25px;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
+        
+        /* Core Services - 4 in a single row */
+        .services-container {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            justify-content: space-between;
+            overflow-x: auto;
+            padding-bottom: 10px;
         }
         .service-card {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
+            flex: 1;
+            min-width: 240px;
+            background: rgba(15, 23, 42, 0.8);
+            border-top: 4px solid #38bdf8;
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #818cf8;
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
         }
         .service-card h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-            color: var(--dark-color);
+            font-size: 1.15rem;
+            color: #38bdf8;
+            margin-bottom: 12px;
         }
         .service-card p {
             font-size: 0.9rem;
-            color: #475569;
+            color: #94a3b8;
+            line-height: 1.5;
         }
-        .showcase-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-        @media (max-width: 768px) {
-            .showcase-box {
-                grid-template-columns: 1fr;
-            }
-        }
-        .before-box, .after-box {
-            padding: 1rem;
-            border-radius: 8px;
-        }
-        .before-box {
-            background: #fef2f2;
-            border: 1px dashed #ef4444;
-        }
-        .after-box {
-            background: #f0fdf4;
-            border: 1px solid var(--accent-color);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 0.5rem;
-            font-size: 0.85rem;
-        }
-        table, th, td {
-            border: 1px solid #cbd5e1;
-        }
-        th, td {
-            padding: 6px;
-            text-align: left;
-        }
-        th {
-            background: #e2e8f0;
-        }
-        /* Excel File Highlight Grid for all 4 skills */
+
+        /* Download Section Grid */
         .downloads-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
         }
-        .excel-highlight-box {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 2px dashed #16a34a;
-            padding: 1.2rem;
-            border-radius: 8px;
+        .download-box {
+            background: rgba(15, 23, 42, 0.8);
+            border: 2px dashed rgba(52, 211, 153, 0.4);
+            padding: 25px 20px;
+            border-radius: 12px;
             text-align: center;
+            transition: all 0.3s ease;
         }
-        .excel-highlight-box h3 {
-            color: #15803d;
-            font-size: 1rem;
-            margin-bottom: 0.3rem;
+        .download-box:hover {
+            border-color: #34d399;
+            transform: translateY(-3px);
+            background: rgba(20, 30, 50, 0.9);
         }
-        .download-btn {
-            display: inline-block;
-            background: #16a34a;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
+        .download-box h3 {
+            color: #34d399;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .download-box p {
+            color: #94a3b8;
             font-size: 0.85rem;
-            margin-top: 0.6rem;
-            transition: background 0.3s;
+            margin-bottom: 20px;
         }
-        .download-btn:hover {
-            background: #15803d;
-        }
-        .cta-btn {
+        .btn {
             display: inline-block;
-            background: var(--primary-color);
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #ffffff;
+            padding: 10px 22px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 1rem;
-            transition: background 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            transition: all 0.2s ease;
         }
-        .cta-btn:hover {
-            background: #1d4ed8;
+        .btn:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5);
         }
+
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background: var(--dark-color);
-            color: #94a3b8;
-            margin-top: 2rem;
+            color: #64748b;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive design for smaller screens */
+        @media(max-width: 900px) {
+            .services-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Raja Gautam</h1>
-        <p>Professional Data Entry, Web Scraping & Excel Operations Specialist</p>
-    </header>
-
-    <div class="container">
-        
-        <!-- About Section -->
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I am a professional data operations specialist equipped with fast typing speed (35+ WPM) and advanced expertise in data processing, spreadsheet management, and automated research. I specialize in turning messy, unorganized data into clean, business-ready reports with 100% accuracy.</p>
-        </section>
-
-        <!-- Core Services Section -->
-        <section>
-            <h2>Core Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>1. Excel & Google Sheets Management</h3>
-                    <p>Advanced formatting, professional layouts, filters, dropdown validation, and formula setups (VLOOKUP, XLOOKUP).</p>
+    <div class="main-wrapper">
+        <!-- Header with Unique Style & Smooth Full-Width Marquee -->
+        <header>
+            <h1>Raja Gautam</h1>
+            <div class="marquee-container">
+                <div class="marquee-text">
+                    ⚡ Data Entry Specialist & QA Automation Engineer &nbsp;&bull;&nbsp; 35+ WPM Typing Speed &nbsp;&bull;&nbsp; Excel Data Cleaning & Web Scraping Expert ⚡
                 </div>
+            </div>
+        </header>
+
+        <!-- Core Services Section (4 cards in 1 row, Data Entry highlighted first) -->
+        <section>
+            <h2>🚀 Core Services</h2>
+            <div class="services-container">
+                
+                <div class="service-card">
+                    <h3>1. Data Entry & Fast Typing</h3>
+                    <p>Accurate keyboard operations with 35+ WPM speed, rapid form filling, copy-pasting, and digital record keeping.</p>
+                </div>
+
                 <div class="service-card">
                     <h3>2. Data Cleaning & Deduplication</h3>
-                    <p>Removing extra spaces, fixing case errors (`TRIM`, `PROPER`), and identifying/deleting duplicate entries.</p>
+                    <p>Removing extra spaces, fixing case errors (`TRIM`, `PROPER`), and identifying/deleting duplicate records.</p>
                 </div>
+
                 <div class="service-card">
                     <h3>3. Web Scraping & Research</h3>
                     <p>Extracting accurate company directory data, leads, and contact lists using advanced browser tools and search operators.</p>
                 </div>
+
                 <div class="service-card">
-                    <h3>4. Document Conversion & PDF Management</h3>
-                    <p>Converting messy PDFs and scanned files into structured, clean Excel spreadsheets or Word documents accurately.</p>
+                    <h3>4. Excel & Document Conversion</h3>
+                    <p>Advanced formatting, professional layouts, formulas, and converting messy PDFs into structured Excel sheets.</p>
                 </div>
+
             </div>
         </section>
 
-        <!-- Before & After Showcase Section -->
+        <!-- Download Practice Files Section -->
         <section>
-            <h2>Project Showcase (Before & After Data Cleaning)</h2>
-            <p>Here is an example of how raw, unformatted web research and data entry inputs are transformed into a clean, professional delivery sheet:</p>
-            
-            <div class="showcase-box">
-                <div class="before-box">
-                    <h3 style="color: #dc2626; font-size: 1rem; margin-bottom: 0.3rem;">🔴 Before (Raw / Messy Data)</h3>
-                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: #64748b;">Extra spaces, uppercase mix, unformatted.</p>
-                    <table>
-                        <tr><th>Name</th><th>City</th></tr>
-                        <tr><td>  rahul sharma </td><td>delhi</td></tr>
-                        <tr><td>PRIYA VERMA</td><td>Mumbai</td></tr>
-                        <tr><td>  rahul sharma </td><td>delhi</td></tr>
-                    </table>
-                </div>
-
-                <div class="after-box">
-                    <h3 style="color: #16a34a; font-size: 1rem; margin-bottom: 0.3rem;">🟢 After (Clean Professional Sheet)</h3>
-                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: #64748b;">Trimmed, Proper Case, Duplicates Removed.</p>
-                    <table>
-                        <tr><th>Customer Name</th><th>City</th><th>Status</th></tr>
-                        <tr><td>Rahul Sharma</td><td>Delhi</td><td>Verified</td></tr>
-                        <tr><td>Priya Verma</td><td>Mumbai</td><td>Verified</td></tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- All 4 Skills Practice Files Grid -->
-            <h3 style="margin-top: 2rem; color: #1e293b; font-size: 1.4rem;">📥 Download Skill-Wise Before & After Practice Files</h3>
-            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">Explore complete Excel workbooks for each of my core professional services:</p>
+            <h2>📂 Download Practice Files (Before & After)</h2>
+            <p style="margin-bottom: 25px; color: #94a3b8;">Explore complete 50-row Excel workbooks demonstrating raw data transformation into structured deliverables:</p>
             
             <div class="downloads-grid">
-                <div class="excel-highlight-box">
+                
+                <div class="download-box">
                     <h3>1. Data Cleaning</h3>
-                    <p style="font-size: 0.8rem; color: #475569;">Raw vs Cleaned datasets.</p>
-                    <a href="Excel_Data_Cleaning_Before_After_Showcase.xlsx" download class="download-btn">Download File</a>
+                    <p>Raw vs Cleaned datasets.</p>
+                    <a href="Excel_Management_Before_After.xlsx" class="btn" download>Download File</a>
                 </div>
-                <div class="excel-highlight-box">
+
+                <div class="download-box">
                     <h3>2. Web Scraping</h3>
-                    <p style="font-size: 0.8rem; color: #475569;">Scraped vs Verified leads.</p>
-                    <a href="Web_Scraping_Research_Before_After.xlsx" download class="download-btn">Download File</a>
+                    <p>Scraped vs Verified leads.</p>
+                    <a href="Web_Scraping_Research_Before_After.xlsx" class="btn" download>Download File</a>
                 </div>
-                <div class="excel-highlight-box">
+
+                <div class="download-box">
                     <h3>3. Excel Management</h3>
-                    <p style="font-size: 0.8rem; color: #475569;">Unformatted vs Dashboard.</p>
-                    <a href="Excel_Management_Before_After.xlsx" download class="download-btn">Download File</a>
+                    <p>Unformatted vs Dashboard.</p>
+                    <a href="Excel_Management_Before_After_2.xlsx" class="btn" download>Download File</a>
                 </div>
-                <div class="excel-highlight-box">
+
+                <div class="download-box">
                     <h3>4. Doc Conversion</h3>
-                    <p style="font-size: 0.8rem; color: #475569;">PDF layout vs Structured.</p>
-                    <a href="Doc_Conversion_Before_After.xlsx" download class="download-btn">Download File</a>
+                    <p>PDF layout vs Structured.</p>
+                    <a href="Doc_Conversion_Before_After.xlsx" class="btn" download>Download File</a>
                 </div>
+
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section style="text-align: center;">
-            <h2>Let's Work Together</h2>
-            <p>Looking for a fast, accurate, and professional data expert for your next project?</p>
-            <a href="https://www.upwork.com" target="_blank" class="cta-btn">Hire Me on Upwork</a>
-        </section>
-
+        <footer>
+            <p>&copy; 2026 Raja Gautam. Designed for Professional Excellence & Hosted on GitHub Pages.</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Raja Gautam. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>
