@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Gautam - Data Entry & Web Scraping Specialist</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --dark-color: #1e293b;
+            --light-color: #f8fafc;
+            --accent-color: #22c55e;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--dark-color);
+            color: white;
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
+        }
+        section {
+            background: white;
+            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .service-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+        .service-card p {
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        .showcase-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 768px) {
+            .showcase-box {
+                grid-template-columns: 1fr;
+            }
+        }
+        .before-box, .after-box {
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        .before-box {
+            background: #fef2f2;
+            border: 1px dashed #ef4444;
+        }
+        .after-box {
+            background: #f0fdf4;
+            border: 1px solid var(--accent-color);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+        table, th, td {
+            border: 1px solid #cbd5e1;
+        }
+        th, td {
+            padding: 6px;
+            text-align: left;
+        }
+        th {
+            background: #e2e8f0;
+        }
+        /* Excel File Highlight Grid for all 4 skills */
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .excel-highlight-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px dashed #16a34a;
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .excel-highlight-box h3 {
+            color: #15803d;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        .download-btn {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-top: 0.6rem;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background: #15803d;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .cta-btn:hover {
+            background: #1d4ed8;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--dark-color);
+            color: #94a3b8;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Raja Gautam</h1>
+        <p>Professional Data Entry, Web Scraping & Excel Operations Specialist</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I am a professional data operations specialist equipped with fast typing speed (35+ WPM) and advanced expertise in data processing, spreadsheet management, and automated research. I specialize in turning messy, unorganized data into clean, business-ready reports with 100% accuracy.</p>
+        </section>
+
+        <!-- Core Services Section -->
+        <section>
+            <h2>Core Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>1. Excel & Google Sheets Management</h3>
+                    <p>Advanced formatting, professional layouts, filters, dropdown validation, and formula setups (VLOOKUP, XLOOKUP).</p>
+                </div>
+                <div class="service-card">
+                    <h3>2. Data Cleaning & Deduplication</h3>
+                    <p>Removing extra spaces, fixing case errors (`TRIM`, `PROPER`), and identifying/deleting duplicate entries.</p>
+                </div>
+                <div class="service-card">
+                    <h3>3. Web Scraping & Research</h3>
+                    <p>Extracting accurate company directory data, leads, and contact lists using advanced browser tools and search operators.</p>
+                </div>
+                <div class="service-card">
+                    <h3>4. Document Conversion & PDF Management</h3>
+                    <p>Converting messy PDFs and scanned files into structured, clean Excel spreadsheets or Word documents accurately.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before & After Showcase Section -->
+        <section>
+            <h2>Project Showcase (Before & After Data Cleaning)</h2>
+            <p>Here is an example of how raw, unformatted web research and data entry inputs are transformed into a clean, professional delivery sheet:</p>
+            
+            <div class="showcase-box">
+                <div class="before-box">
+                    <h3 style="color: #dc2626; font-size: 1rem; margin-bottom: 0.3rem;">🔴 Before (Raw / Messy Data)</h3>
+                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: #64748b;">Extra spaces, uppercase mix, unformatted.</p>
+                    <table>
+                        <tr><th>Name</th><th>City</th></tr>
+                        <tr><td>  rahul sharma </td><td>delhi</td></tr>
+                        <tr><td>PRIYA VERMA</td><td>Mumbai</td></tr>
+                        <tr><td>  rahul sharma </td><td>delhi</td></tr>
+                    </table>
+                </div>
+
+                <div class="after-box">
+                    <h3 style="color: #16a34a; font-size: 1rem; margin-bottom: 0.3rem;">🟢 After (Clean Professional Sheet)</h3>
+                    <p style="font-size: 0.8rem; margin-bottom: 0.5rem; color: #64748b;">Trimmed, Proper Case, Duplicates Removed.</p>
+                    <table>
+                        <tr><th>Customer Name</th><th>City</th><th>Status</th></tr>
+                        <tr><td>Rahul Sharma</td><td>Delhi</td><td>Verified</td></tr>
+                        <tr><td>Priya Verma</td><td>Mumbai</td><td>Verified</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- All 4 Skills Practice Files Grid -->
+            <h3 style="margin-top: 2rem; color: #1e293b; font-size: 1.4rem;">📥 Download Skill-Wise Before & After Practice Files</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1rem;">Explore complete Excel workbooks for each of my core professional services:</p>
+            
+            <div class="downloads-grid">
+                <div class="excel-highlight-box">
+                    <h3>1. Data Cleaning</h3>
+                    <p style="font-size: 0.8rem; color: #475569;">Raw vs Cleaned datasets.</p>
+                    <a href="Excel_Data_Cleaning_Before_After_Showcase.xlsx" download class="download-btn">Download File</a>
+                </div>
+                <div class="excel-highlight-box">
+                    <h3>2. Web Scraping</h3>
+                    <p style="font-size: 0.8rem; color: #475569;">Scraped vs Verified leads.</p>
+                    <a href="Web_Scraping_Research_Before_After.xlsx" download class="download-btn">Download File</a>
+                </div>
+                <div class="excel-highlight-box">
+                    <h3>3. Excel Management</h3>
+                    <p style="font-size: 0.8rem; color: #475569;">Unformatted vs Dashboard.</p>
+                    <a href="Excel_Management_Before_After.xlsx" download class="download-btn">Download File</a>
+                </div>
+                <div class="excel-highlight-box">
+                    <h3>4. Doc Conversion</h3>
+                    <p style="font-size: 0.8rem; color: #475569;">PDF layout vs Structured.</p>
+                    <a href="Document_Conversion_Before_After.xlsx" download class="download-btn">Download File</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section style="text-align: center;">
+            <h2>Let's Work Together</h2>
+            <p>Looking for a fast, accurate, and professional data expert for your next project?</p>
+            <a href="https://www.upwork.com" target="_blank" class="cta-btn">Hire Me on Upwork</a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Raja Gautam. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
